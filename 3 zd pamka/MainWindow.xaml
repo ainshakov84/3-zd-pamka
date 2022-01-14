@@ -18,7 +18,7 @@
                     <TextBlock Text="Time New Roman"/>
                     <TextBlock Text="Verdana"/>
                 </ComboBox>
-                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="50">
+                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="50" SelectionChanged="ComboBox_SelectionChanged_1">
                     <TextBlock Text="12"/>
                     <TextBlock Text="14"/>
                     <TextBlock Text="16"/>
@@ -39,9 +39,9 @@
                 <Separator/>
             </ToolBar>
             <ToolBar Margin="5" Padding="5">
-                <StackPanel VerticalAlignment="Center" TouchDown="StackPanel_TouchDown">
-                    <RadioButton Content="черный" Click="RadioButton_Click"/>
-                    <RadioButton Content="красный"/>
+                <StackPanel VerticalAlignment="Center">
+                    <RadioButton Content="черный" Checked="RadioButton_Checked"/>
+                    <RadioButton Content="красный" Checked="RadioButton_Checked_1"/>
 
                 </StackPanel>  
             </ToolBar>

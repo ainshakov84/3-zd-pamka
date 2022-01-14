@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -58,6 +59,22 @@ namespace _3_zd_pamka
             }
         }
 
-       
+        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            string fontSize = ((sender as ComboBox).SelectedItem as TextBlock).Text;
+            if (textBox != null)
+                textBox.FontSize = Convert.ToDouble(fontSize);
+        }
+
+      
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            textBox.Foreground = Brushes.Black;
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            textBox.Foreground = Brushes.Red;
+        }
     }
 }
